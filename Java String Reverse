@@ -1,0 +1,25 @@
+import java.util.Scanner;
+public class mareddy{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        String s=sc.nextLine();
+        if(check(s)){
+            System.out.print("Yes");
+        }
+        else{
+            System.out.print("No");
+        }
+    }
+    static boolean check(String s){
+        int n=s.length();
+        for(int i=0;i<n/2;i++){
+            if(s.charAt(i)==s.charAt(n-1)){
+                n--;
+            }
+            else{
+                return false;
+            }
+        }
+        return true;
+    }
+}
